@@ -28,11 +28,11 @@ curl_setopt_array($curl, array(
     "Timestamp": "20231003124755",
     "TransactionType": "CustomerPayBillOnline",
     "Amount": 5,
-    "PartyA": 254718583299,
+    "PartyA": 254718668308,
     "PartyB": 174379,
     "PhoneNumber": "254718668308",
     "CallBackURL": "https://mydomain.com/path",
-    "AccountReference": "CompanyXLTD",
+    "AccountReference": "Safari Power",
     "TransactionDesc": "Payment of X" 
   }',
   CURLOPT_HTTPHEADER => array(
@@ -53,6 +53,7 @@ echo $response;
 
 // Check if the request method is POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    echo $_SERVER;
     // Get mobile number and amount from the request
     $mobileNumber = $_POST['mobileNumber'];
     $amount = $_POST['amount'];
